@@ -31,13 +31,26 @@ export const SiteSettingsProvider = ({ children }) => {
           }
           return acc;
         }, {});
-        
+
         // Deep merge: Defaults <- DB Data
         setContent(prev => {
           const nextState = { ...initialSiteContent, ...prev };
-          
+
           if (contentMap.global) nextState.global = { ...nextState.global, ...contentMap.global };
-          if (contentMap.pages) nextState.pages = { ...nextState.pages, ...contentMap.pages };
+
+          // Only merge pages if Supabase has non-empty data, otherwise keep defaults
+          if (contentMap.pages) {
+            const mergedPages = { ...nextState.pages };
+            Object.keys(contentMap.pages).forEach(pageName => {
+              const supabasePage = contentMap.pages[pageName];
+              // Only override if Supabase has actual content (non-empty array)
+              if (Array.isArray(supabasePage) && supabasePage.length > 0) {
+                mergedPages[pageName] = supabasePage;
+              }
+              // If Supabase has empty array and we have defaults, keep defaults
+            });
+            nextState.pages = mergedPages;
+          }
 
           Object.keys(contentMap).forEach(key => {
             if (key !== 'global' && key !== 'pages') {
@@ -51,10 +64,10 @@ export const SiteSettingsProvider = ({ children }) => {
       setHasUnsavedChanges(false);
     } catch (error) {
       console.error('Error fetching site content:', error);
-      toast({ 
-        title: "Connection Error", 
+      toast({
+        title: "Connection Error",
         description: "Could not load latest content. Showing defaults.",
-        variant: "destructive" 
+        variant: "destructive"
       });
     } finally {
       setLoading(false);
@@ -71,7 +84,7 @@ export const SiteSettingsProvider = ({ children }) => {
     try {
       // NOTE: Removed strict Supabase Session check because we are using simple Local Auth for Admin UI
       // The RLS policies have been updated to allow public writes for this simplified setup.
-      
+
       const isAuthenticated = localStorage.getItem('admin_authenticated') === 'true';
       if (!isAuthenticated) {
         throw new Error("You must be logged in to save changes.");
@@ -79,12 +92,12 @@ export const SiteSettingsProvider = ({ children }) => {
 
       // Prepare data for batch upsert
       const upsertData = [];
-      
+
       // Add global settings
       if (content.global) {
         upsertData.push({ key: 'global', value: content.global, updated_at: new Date().toISOString() });
       }
-      
+
       // Add pages structure
       if (content.pages) {
         upsertData.push({ key: 'pages', value: content.pages, updated_at: new Date().toISOString() });
@@ -93,7 +106,7 @@ export const SiteSettingsProvider = ({ children }) => {
       // Add other root keys if they exist in content state
       Object.keys(content).forEach(key => {
         if (key !== 'global' && key !== 'pages') {
-           upsertData.push({ key, value: content[key], updated_at: new Date().toISOString() });
+          upsertData.push({ key, value: content[key], updated_at: new Date().toISOString() });
         }
       });
 
@@ -104,8 +117,8 @@ export const SiteSettingsProvider = ({ children }) => {
       if (error) throw error;
 
       setHasUnsavedChanges(false);
-      toast({ 
-        title: "Settings Saved", 
+      toast({
+        title: "Settings Saved",
         description: "All website content has been updated successfully.",
         className: "bg-green-50 border-green-200 text-green-900"
       });
@@ -113,10 +126,10 @@ export const SiteSettingsProvider = ({ children }) => {
 
     } catch (err) {
       console.error('Save failed:', err);
-      toast({ 
-        title: "Save Failed", 
-        description: err.message || "Changes could not be saved to the server.", 
-        variant: "destructive" 
+      toast({
+        title: "Save Failed",
+        description: err.message || "Changes could not be saved to the server.",
+        variant: "destructive"
       });
       return false;
     } finally {
@@ -150,7 +163,7 @@ export const SiteSettingsProvider = ({ children }) => {
   };
 
   // --- Section Management Helpers ---
-  
+
   const addSection = (page, sectionData) => {
     const currentPages = content.pages || {};
     const pageSections = currentPages[page] || [];
@@ -185,8 +198,8 @@ export const SiteSettingsProvider = ({ children }) => {
   };
 
   const getPageSections = (pageName) => {
-     const pages = content.pages || initialSiteContent.pages || {};
-     return pages[pageName] || [];
+    const pages = content.pages || initialSiteContent.pages || {};
+    return pages[pageName] || [];
   };
 
   const value = {

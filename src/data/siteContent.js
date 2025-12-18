@@ -58,7 +58,12 @@ export const initialSiteContent = {
     ]
   },
   pages: {
-    home: [],
+    home: [
+      { id: 1, component: 'HeroSection', enabled: true },
+      { id: 2, component: 'PropertiesSection', enabled: true },
+      { id: 3, component: 'WhyTenantsLove', enabled: true },
+      { id: 4, component: 'MapSection', enabled: true }
+    ],
     about: [],
     location: [],
     contact: [],
