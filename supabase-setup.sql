@@ -1,5 +1,5 @@
 -- ============================================
--- ShivaDhama Residency - Complete Setup Script
+-- Madhava Organics - Complete Setup Script
 -- Run this in your Supabase SQL Editor
 -- ============================================
 

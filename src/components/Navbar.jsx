@@ -28,30 +28,29 @@ const Navbar = () => {
           <Link to="/" className="flex items-center space-x-2">
             <Building2 className="w-8 h-8 text-maroon" />
             <span className="text-xl font-bold text-gray-900 hidden sm:inline-block">
-              {content.global?.siteName || "Shivadhama Residency"}
+              {content.global?.siteName || "Madhava Organics"}
             </span>
             <span className="text-xl font-bold text-gray-900 sm:hidden">
               {content.global?.siteName?.split(' ')[0] || "Shivadhama"}
             </span>
           </Link>
-          
+
           <div className="hidden md:flex items-center space-x-6">
             {navItems.map((item) => (
               <Link
                 key={item.path}
                 to={item.path}
-                className={`flex items-center space-x-1 transition-colors text-sm font-medium ${
-                  isActive(item.path)
+                className={`flex items-center space-x-1 transition-colors text-sm font-medium ${isActive(item.path)
                     ? 'text-maroon'
                     : 'text-gray-700 hover:text-maroon'
-                }`}
+                  }`}
               >
                 <item.icon className="w-4 h-4" />
                 <span>{item.label}</span>
               </Link>
             ))}
           </div>
-          
+
           <button
             className="md:hidden text-gray-700"
             onClick={() => setIsOpen(!isOpen)}
@@ -61,7 +60,7 @@ const Navbar = () => {
           </button>
         </div>
       </div>
-      
+
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -76,11 +75,10 @@ const Navbar = () => {
                   key={item.path}
                   to={item.path}
                   onClick={() => setIsOpen(false)}
-                  className={`flex items-center space-x-3 py-3 px-4 rounded-lg transition-colors ${
-                    isActive(item.path)
+                  className={`flex items-center space-x-3 py-3 px-4 rounded-lg transition-colors ${isActive(item.path)
                       ? 'bg-maroon text-white'
                       : 'text-gray-700 hover:bg-gray-100'
-                  }`}
+                    }`}
                 >
                   <item.icon className="w-5 h-5" />
                   <span className="font-medium">{item.label}</span>

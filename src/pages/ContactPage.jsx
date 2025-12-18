@@ -33,23 +33,23 @@ const ContactPage = () => {
   return (
     <>
       <Helmet>
-        <title>{content.contact?.title} | Shivadhama Residency</title>
-        <meta name="description" content="Contact Shivadhama Residency for premium rental homes in Jayalakshmipuram, Mysuru. Call us or visit directly." />
+        <title>{content.contact?.title} | Madhava Organics</title>
+        <meta name="description" content="Contact Madhava Organics for premium rental homes in Jayalakshmipuram, Mysuru. Call us or visit directly." />
       </Helmet>
-      
+
       <Navbar />
-      
+
       <div className="bg-[#F5F1ED] min-h-screen py-12">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <motion.h1 
+            <motion.h1
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               className="text-4xl font-bold text-gray-900 mb-4"
             >
               {content.contact?.title}
             </motion.h1>
-            <motion.p 
+            <motion.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.2 }}
@@ -61,7 +61,7 @@ const ContactPage = () => {
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {/* Contact Info Cards */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.3 }}
@@ -105,10 +105,10 @@ const ContactPage = () => {
                   <div>
                     <h3 className="font-bold text-gray-900 mb-1">Visit Us</h3>
                     <p className="text-gray-600 text-sm mb-3">{content.global?.address}</p>
-                    <Button 
+                    <Button
                       onClick={handleDirections}
-                      variant="outline" 
-                      size="sm" 
+                      variant="outline"
+                      size="sm"
                       className="w-full"
                     >
                       <Navigation className="w-4 h-4 mr-2" />
@@ -134,7 +134,7 @@ const ContactPage = () => {
             </motion.div>
 
             {/* Contact Form */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
@@ -152,7 +152,7 @@ const ContactPage = () => {
                     <Input id="phone" placeholder="+91 98765 43210" required />
                   </div>
                 </div>
-                
+
                 <div className="space-y-2">
                   <Label htmlFor="email">Email Address</Label>
                   <Input id="email" type="email" placeholder="john@example.com" required />
@@ -165,11 +165,11 @@ const ContactPage = () => {
 
                 <div className="space-y-2">
                   <Label htmlFor="message">Message</Label>
-                  <Textarea 
-                    id="message" 
-                    placeholder="I am interested in viewing the property..." 
+                  <Textarea
+                    id="message"
+                    placeholder="I am interested in viewing the property..."
                     className="min-h-[150px]"
-                    required 
+                    required
                   />
                 </div>
 
@@ -181,7 +181,7 @@ const ContactPage = () => {
           </div>
         </div>
       </div>
-      
+
       <Footer />
     </>
   );

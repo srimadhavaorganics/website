@@ -15,22 +15,22 @@ const BlogPage = () => {
   return (
     <>
       <Helmet>
-        <title>Blog | Shivadhama Residency</title>
-        <meta name="description" content="Stay updated with the latest news, tips, and insights from Shivadhama Residency blog. Discover living in Jayalakshmipuram, Mysuru." />
+        <title>Blog | Madhava Organics</title>
+        <meta name="description" content="Stay updated with the latest news, tips, and insights from Madhava Organics blog. Discover living in Jayalakshmipuram, Mysuru." />
       </Helmet>
-      
+
       <Navbar />
-      
+
       <div className="bg-gray-50 py-16 min-h-screen">
         <div className="container mx-auto px-4">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="text-center mb-16"
           >
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Our Blog</h1>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
-              Insights about Mysuru living, rental tips, and community updates from Shivadhama Residency.
+              Insights about Mysuru living, rental tips, and community updates from Madhava Organics.
             </p>
           </motion.div>
 
@@ -45,22 +45,22 @@ const BlogPage = () => {
                   className="bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden group border border-gray-100"
                 >
                   <Link to={`/blog/${blog.id}`} className="block relative overflow-hidden h-56">
-                    <img 
-                      src={blog.image} 
-                      alt={blog.title} 
-                      className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" 
+                    <img
+                      src={blog.image}
+                      alt={blog.title}
+                      className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
                     />
                     <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors" />
                     <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-maroon flex items-center">
-                       <Tag className="w-3 h-3 mr-1" /> {blog.category}
+                      <Tag className="w-3 h-3 mr-1" /> {blog.category}
                     </div>
                   </Link>
-                  
+
                   <div className="p-6 flex flex-col flex-grow">
                     <div className="flex items-center text-xs text-gray-500 mb-3 space-x-3">
-                       <span>{blog.date}</span>
-                       <span>•</span>
-                       <span className="flex items-center"><Clock className="w-3 h-3 mr-1" /> {blog.readTime || '5 min'}</span>
+                      <span>{blog.date}</span>
+                      <span>•</span>
+                      <span className="flex items-center"><Clock className="w-3 h-3 mr-1" /> {blog.readTime || '5 min'}</span>
                     </div>
 
                     <h2 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-maroon transition-colors line-clamp-2">
@@ -68,11 +68,11 @@ const BlogPage = () => {
                         {blog.title}
                       </Link>
                     </h2>
-                    
+
                     <p className="text-gray-600 text-sm mb-6 line-clamp-3 leading-relaxed flex-grow">
                       {blog.excerpt}
                     </p>
-                    
+
                     <div className="pt-4 border-t border-gray-100 mt-auto">
                       <Link to={`/blog/${blog.id}`} className="inline-flex items-center text-maroon font-semibold hover:text-maroon-dark hover:underline group/link">
                         Read Full Article <ArrowRight className="w-4 h-4 ml-1 transform group-hover/link:translate-x-1 transition-transform" />
@@ -93,7 +93,7 @@ const BlogPage = () => {
           </div>
         </div>
       </div>
-      
+
       <Footer />
     </>
   );

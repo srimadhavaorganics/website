@@ -21,7 +21,7 @@ const HomePage = () => {
   const { properties } = useProperties();
   const [filters, setFilters] = useState({
     bhk: 'all',
-    status: 'all', 
+    status: 'all',
     floor: 'all',
     budget: 'all'
   });
@@ -86,8 +86,8 @@ const HomePage = () => {
           <div className="text-center py-12 bg-white rounded-lg shadow-sm">
             <h3 className="text-xl font-medium text-gray-900">No properties match your filters</h3>
             <p className="text-gray-500 mt-2">Try adjusting your search criteria to see more results.</p>
-            <Button 
-              variant="link" 
+            <Button
+              variant="link"
               onClick={() => handleFilterChange('reset')}
               className="mt-4 text-maroon"
             >
@@ -95,7 +95,7 @@ const HomePage = () => {
             </Button>
           </div>
         )}
-        
+
         <div className="mt-12 text-center">
           <Link to="/contact">
             <Button variant="outline" className="border-maroon text-maroon hover:bg-maroon hover:text-white transition-colors">
@@ -110,17 +110,17 @@ const HomePage = () => {
   return (
     <>
       <Helmet>
-        <title>Shivadhama Residency | Premium Rental Homes in Jayalakshmipuram, Mysuru</title>
+        <title>Madhava Organics | Premium Rental Homes in Jayalakshmipuram, Mysuru</title>
         <meta name="description" content="Find your perfect rental home in Jayalakshmipuram, Mysuru. Premium 1, 2 & 3 BHK apartments with modern amenities. No broker, direct owner." />
       </Helmet>
-      
+
       <Navbar />
-      
+
       {pageSections.map((section) => {
         if (section.type === 'custom') {
           return <DynamicSection key={section.id} data={section} />;
         }
-        
+
         // Render system components
         switch (section.component) {
           case 'HeroSection':
@@ -135,7 +135,7 @@ const HomePage = () => {
             return null;
         }
       })}
-      
+
       <Footer />
     </>
   );

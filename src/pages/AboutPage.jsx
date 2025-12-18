@@ -15,15 +15,15 @@ const AboutPage = () => {
   return (
     <>
       <Helmet>
-        <title>{content.about?.title} | Shivadhama Residency Mysuru</title>
-        <meta name="description" content="Learn about Shivadhama Residency's mission to provide premium, broker-free living in Jayalakshmipuram, Mysuru. Family-run, tenant-focused, and quality-driven." />
+        <title>{content.about?.title} | Madhava Organics Mysuru</title>
+        <meta name="description" content="Learn about Madhava Organics's mission to provide premium, broker-free living in Jayalakshmipuram, Mysuru. Family-run, tenant-focused, and quality-driven." />
       </Helmet>
-      
+
       <Navbar />
-      
+
       <div className="bg-gray-50 py-16">
         <div className="container mx-auto px-4">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="max-w-3xl mx-auto text-center mb-12"
@@ -43,32 +43,32 @@ const AboutPage = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16 items-center">
-             <motion.div
-               initial={{ opacity: 0, x: -20 }}
-               whileInView={{ opacity: 1, x: 0 }}
-               viewport={{ once: true }}
-               transition={{ duration: 0.6 }}
-             >
-                <img 
-                  src={images.about?.mainImage}
-                  alt="Quality construction" 
-                  className="rounded-lg shadow-lg w-full"
-                />
-             </motion.div>
-             <motion.div
-               initial={{ opacity: 0, x: 20 }}
-               whileInView={{ opacity: 1, x: 0 }}
-               viewport={{ once: true }}
-               transition={{ duration: 0.6 }}
-               className="text-gray-700 leading-relaxed space-y-4"
-             >
-                <p>{content.about?.welcomeParagraph1}</p>
-                <p>{content.about?.welcomeParagraph2}</p>
-             </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <img
+                src={images.about?.mainImage}
+                alt="Quality construction"
+                className="rounded-lg shadow-lg w-full"
+              />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="text-gray-700 leading-relaxed space-y-4"
+            >
+              <p>{content.about?.welcomeParagraph1}</p>
+              <p>{content.about?.welcomeParagraph2}</p>
+            </motion.div>
           </div>
 
           <div className="max-w-3xl mx-auto mb-16">
-            <motion.h2 
+            <motion.h2
               className="text-3xl font-bold text-gray-900 mb-6 text-center"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -79,8 +79,8 @@ const AboutPage = () => {
             </motion.h2>
             <ul className="space-y-4 text-gray-700 list-none p-0">
               {content.about?.values.map((value, index) => (
-                <motion.li 
-                  key={index} 
+                <motion.li
+                  key={index}
                   className="flex items-start space-x-3"
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -96,7 +96,7 @@ const AboutPage = () => {
             </ul>
           </div>
 
-          <motion.div 
+          <motion.div
             className="max-w-3xl mx-auto text-center text-gray-700 leading-relaxed space-y-4"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -108,7 +108,7 @@ const AboutPage = () => {
           </motion.div>
         </div>
       </div>
-      
+
       <Footer />
     </>
   );

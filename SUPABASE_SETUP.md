@@ -1,6 +1,6 @@
-# Supabase Setup Guide for ShivaDhama Residency
+# Supabase Setup Guide for Madhava Organics
 
-This guide provides comprehensive instructions for setting up all required Supabase resources for the ShivaDhama Residency application.
+This guide provides comprehensive instructions for setting up all required Supabase resources for the Madhava Organics application.
 
 ## Table of Contents
 
@@ -30,7 +30,7 @@ This guide provides comprehensive instructions for setting up all required Supab
 1. Log in to [Supabase Dashboard](https://app.supabase.com)
 2. Click **"New Project"**
 3. Fill in the project details:
-   - **Name**: ShivaDhama Residency (or your preferred name)
+   - **Name**: Madhava Organics (or your preferred name)
    - **Database Password**: Choose a strong password (save this securely)
    - **Region**: Select the region closest to your users
 4. Click **"Create new project"**
@@ -519,7 +519,7 @@ For convenience, here's a complete SQL script you can run in the Supabase SQL Ed
 
 ```sql
 -- ============================================
--- ShivaDhama Residency - Complete Setup Script
+-- Madhava Organics - Complete Setup Script
 -- ============================================
 
 -- 1. Create properties table

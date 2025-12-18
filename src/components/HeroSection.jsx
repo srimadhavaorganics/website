@@ -15,10 +15,10 @@ const HeroSection = () => {
       {bgImage ? (
         <>
           <div className="absolute inset-0 z-0">
-             <img src={bgImage} alt="Hero Background" className="w-full h-full object-cover" />
-             {/* Enhanced gradient overlay for better text contrast */}
-             <div className="absolute inset-0 bg-gradient-to-r from-maroon/90 via-maroon/70 to-maroon/50 mix-blend-multiply" />
-             <div className="absolute inset-0 bg-black/20" />
+            <img src={bgImage} alt="Hero Background" className="w-full h-full object-cover" />
+            {/* Enhanced gradient overlay for better text contrast */}
+            <div className="absolute inset-0 bg-gradient-to-r from-maroon/90 via-maroon/70 to-maroon/50 mix-blend-multiply" />
+            <div className="absolute inset-0 bg-black/20" />
           </div>
         </>
       ) : (
@@ -28,7 +28,7 @@ const HeroSection = () => {
           }}></div>
         </div>
       )}
-      
+
       <div className="container mx-auto px-4 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -36,13 +36,13 @@ const HeroSection = () => {
           transition={{ duration: 0.8 }}
           className="text-center max-w-4xl mx-auto"
         >
-          <motion.h1 
+          <motion.h1
             className="text-4xl md:text-7xl font-bold mb-6 drop-shadow-lg tracking-tight"
             initial={{ scale: 0.95 }}
             animate={{ scale: 1 }}
             transition={{ duration: 0.8 }}
           >
-            {content.home?.heroTitle || "Welcome to Shivadhama Residency"}
+            {content.home?.heroTitle || "Madhava Organics"}
           </motion.h1>
           <p className="text-xl md:text-3xl mb-8 text-white/95 font-light drop-shadow-md">
             {content.home?.heroSubtitle || "Premium Rental Apartments in the Heart of Mysuru"}

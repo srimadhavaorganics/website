@@ -4,11 +4,11 @@ import { MessageCircle, Phone } from 'lucide-react';
 
 const FloatingButtons = () => {
   const handleWhatsApp = () => {
-    window.open('https://wa.me/919886000624?text=Hi%2C%20I%20am%20interested%20in%20Shivadhama%20Residency', '_blank');
+    window.open('https://wa.me/9999999999?text=Hi%2C%20I%20am%20interested%20in%20Shivadhama%20Residency', '_blank');
   };
 
   const handleCall = () => {
-    window.location.href = 'tel:+919886000624';
+    window.location.href = 'tel:+9999999999';
   };
 
   return (
@@ -23,7 +23,7 @@ const FloatingButtons = () => {
       >
         <MessageCircle className="w-6 h-6" />
       </motion.button>
-      
+
       <motion.button
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}

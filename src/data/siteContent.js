@@ -1,17 +1,17 @@
 
 export const initialSiteContent = {
   global: {
-    siteName: "Shivadhama Residency",
-    contactPhone: "+91 98860 00624",
-    contactEmail: "shivadhamamysuru@gmail.com",
-    address: "Shivadhama Residency, 53, 2nd Cross Road, 4th Block, Jayalakshmipuram, Mysuru, Karnataka 570012",
+    siteName: "Madhava Organics",
+    contactPhone: "9999999999",
+    contactEmail: "srimadhavaorganics@gmail.com",
+    address: "Madhava Organics, 53, 2nd Cross Road, 4th Block, Jayalakshmipuram, Mysuru, Karnataka 570012",
     googleMapsUrl: "https://www.google.com/maps/dir//Shivadhama+Residency,+53,+2nd+Cross+Road,+4th+Block,+Jayalakshmipuram,+Mysuru,+Karnataka+570012/@12.3225958,76.6272425,17z/data=!4m16!1m7!3m6!1s0x3baf7a9033cfe2c9:0x5f95e6a0b830538b!2sShivadhama+Residency!8m2!3d12.3225958!4d76.6272425!16s%2Fg%2F11f_b_0qf1!4m7!1m0!1m5!1m1!1s0x3baf7a9033cfe2c9:0x5f95e6a0b830538b!2m2!1d76.6271845!2d12.3226516?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoKLDEwMDc5MjA3MUgBUAM%3D",
     footerAbout: "Your trusted partner for broker-free rental homes in Mysuru. We offer premium apartments with modern amenities in the heart of Jayalakshmipuram."
   },
   home: {
-    heroTitle: "Welcome to Shivadhama Residency",
+    heroTitle: "Madhava Organics",
     heroSubtitle: "Premium Rental Apartments in the Heart of Mysuru",
-    whyChooseTitle: "Why Choose Shivadhama Residency?",
+    whyChooseTitle: "Why Choose Madhava Organics?",
     whyChooseSubtitle: "We don't just rent apartments; we provide homes. Experience a hassle-free lifestyle in Mysuru's most prestigious neighborhood."
   },
   about: {
@@ -23,8 +23,8 @@ export const initialSiteContent = {
       "Well-Maintained Units",
       "Prime Residential Location"
     ],
-    welcomeParagraph1: "Welcome to Shiva Dhama Residency, a peaceful and family-friendly rental community in Mysuru. We believe that finding a home should be simple, transparent, and free from brokerage. That's why we offer direct-owner rental houses, allowing you to save money and enjoy complete clarity in rent, deposit, and agreements.",
-    welcomeParagraph2: "Our property is thoughtfully designed for comfort and convenience. Every house is well-ventilated, naturally lit, and located in a calm neighbourhood with easy access to schools, shops, hospitals, transportation, and daily essentials. Whether you are a working professional, a couple, or a family looking for long-term stay, Shiva Dhama Residency provides a safe and comfortable living experience. At Shiva Dhama Residency, we value honesty, cleanliness, and trust. We maintain all units personally, ensuring a smooth and hassle-free renting process. With us, you don't deal with agents — you connect directly with the owner for clear communication and a stress-free stay.",
+    welcomeParagraph1: "Madhava Organics, a peaceful and family-friendly rental community in Mysuru. We believe that finding a home should be simple, transparent, and free from brokerage. That's why we offer direct-owner rental houses, allowing you to save money and enjoy complete clarity in rent, deposit, and agreements.",
+    welcomeParagraph2: "Our property is thoughtfully designed for comfort and convenience. Every house is well-ventilated, naturally lit, and located in a calm neighbourhood with easy access to schools, shops, hospitals, transportation, and daily essentials. Whether you are a working professional, a couple, or a family looking for long-term stay, Madhava Organics provides a safe and comfortable living experience. At Madhava Organics, we value honesty, cleanliness, and trust. We maintain all units personally, ensuring a smooth and hassle-free renting process. With us, you don't deal with agents — you connect directly with the owner for clear communication and a stress-free stay.",
     valuesTitle: "Our Values",
     values: [
       { name: "Transparency", description: "No brokerage, no hidden charges." },
@@ -39,7 +39,7 @@ export const initialSiteContent = {
     title: "Get in Touch",
     subtitle: "Have questions about our apartments? We'd love to hear from you.",
     hours: "9:00 AM - 7:00 PM (Daily)",
-    emailTo: "shivadhamamysuru@gmail.com"
+    emailTo: "srimadhavaorganics@gmail.com"
   },
   location: {
     title: "The Heart of Mysuru",

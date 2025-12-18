@@ -50,7 +50,7 @@ const AdminPage = () => {
     return (
       <>
         <Helmet>
-          <title>Admin Login | Shivadhama Residency</title>
+          <title>Admin Login | Madhava Organics</title>
         </Helmet>
         <AdminLogin onLoginSuccess={handleLoginSuccess} />
       </>
@@ -60,7 +60,7 @@ const AdminPage = () => {
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
       <Helmet>
-        <title>Admin Dashboard | Shivadhama Residency</title>
+        <title>Admin Dashboard | Madhava Organics</title>
       </Helmet>
 
       <Navbar />

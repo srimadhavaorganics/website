@@ -21,13 +21,13 @@ const Footer = () => {
           <div>
             <div className="flex items-center space-x-2 mb-4">
               <Building2 className="w-8 h-8 text-maroon" />
-              <span className="text-xl font-bold">{content.global?.siteName || "Shivadhama Residency"}</span>
+              <span className="text-xl font-bold">{content.global?.siteName || "Madhava Organics"}</span>
             </div>
             <p className="text-gray-400 mb-4 text-sm leading-relaxed">
               {content.global?.footerAbout}
             </p>
           </div>
-          
+
           <div>
             <h3 className="text-lg font-bold mb-4 text-maroon-light">Quick Links</h3>
             <nav className="space-y-2 text-sm">
@@ -48,7 +48,7 @@ const Footer = () => {
               </Link>
             </nav>
           </div>
-          
+
           <div>
             <h3 className="text-lg font-bold mb-4 text-maroon-light">Contact Info</h3>
             <div className="space-y-3 text-sm">
@@ -65,11 +65,11 @@ const Footer = () => {
                 <span className="text-gray-400">{content.global?.contactEmail}</span>
               </div>
               <div className="pt-2">
-                <Button 
-                   onClick={handleDirections}
-                   variant="outline" 
-                   size="sm" 
-                   className="text-white border-white/20 hover:bg-white/10 hover:text-white"
+                <Button
+                  onClick={handleDirections}
+                  variant="outline"
+                  size="sm"
+                  className="text-white border-white/20 hover:bg-white/10 hover:text-white"
                 >
                   <Navigation className="w-4 h-4 mr-2" />
                   Get Directions
@@ -78,7 +78,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        
+
         <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
           <p>&copy; {new Date().getFullYear()} {content.global?.siteName}. All rights reserved.</p>
         </div>

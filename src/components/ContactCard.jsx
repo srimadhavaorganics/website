@@ -5,8 +5,8 @@ import { Phone, MessageCircle, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const ContactCard = ({ property }) => {
-  const ownerEmail = "shivadhamamysuru@gmail.com";
-  const ownerPhone = "+919886000624";
+  const ownerEmail = "srimadhavaorganics@gmail.com";
+  const ownerPhone = "+9999999999";
 
   const handleCall = () => {
     window.location.href = `tel:${ownerPhone.replace(/\s/g, '')}`;
@@ -18,7 +18,7 @@ const ContactCard = ({ property }) => {
   };
 
   const subject = `Inquiry about ${property.title}`;
-  const body = `Hi,\n\nI'm interested in ${property.title} (${property.bhk}) at Shivadhama Residency.\n\nPlease provide more details regarding availability and visiting hours.\n\nThank you.`;
+  const body = `Hi,\n\nI'm interested in ${property.title} (${property.bhk}) at Madhava Organics.\n\nPlease provide more details regarding availability and visiting hours.\n\nThank you.`;
 
   const handleEmail = () => {
     // Constructs a specific URL to open Gmail's compose window in the browser
@@ -35,7 +35,7 @@ const ContactCard = ({ property }) => {
     >
       <div className="bg-white rounded-lg shadow-md p-6 border border-gray-100">
         <h3 className="text-xl font-bold text-gray-900 mb-4">Contact Owner</h3>
-        
+
         <div className="space-y-3">
           <Button
             onClick={handleCall}
@@ -44,7 +44,7 @@ const ContactCard = ({ property }) => {
             <Phone className="w-4 h-4 mr-2" />
             Call Now
           </Button>
-          
+
           <Button
             onClick={handleWhatsApp}
             className="w-full bg-[#25D366] hover:bg-[#20bd5a] text-white transition-colors h-12"
@@ -52,7 +52,7 @@ const ContactCard = ({ property }) => {
             <MessageCircle className="w-4 h-4 mr-2" />
             WhatsApp
           </Button>
-          
+
           <Button
             onClick={handleEmail}
             variant="outline"
@@ -62,18 +62,18 @@ const ContactCard = ({ property }) => {
             Email
           </Button>
         </div>
-        
+
         <div className="mt-6 pt-6 border-t border-gray-200">
           <p className="text-sm text-gray-600 mb-3">Contact Details:</p>
           <div className="space-y-2">
             <p className="text-sm flex items-center text-gray-800">
-              <span className="font-bold w-16 text-gray-900">Phone:</span> 
+              <span className="font-bold w-16 text-gray-900">Phone:</span>
               <a href={`tel:${ownerPhone.replace(/\s/g, '')}`} className="hover:text-[#8B2D2D] transition-colors font-medium">
                 {ownerPhone}
               </a>
             </p>
             <p className="text-sm flex items-center text-gray-800">
-              <span className="font-bold w-16 text-gray-900">Email:</span> 
+              <span className="font-bold w-16 text-gray-900">Email:</span>
               <a href={`mailto:${ownerEmail}`} className="hover:text-[#8B2D2D] transition-colors break-all font-medium">
                 {ownerEmail}
               </a>
