@@ -4,7 +4,7 @@ import { MessageCircle, Phone } from 'lucide-react';
 
 const FloatingButtons = () => {
   const handleWhatsApp = () => {
-    window.open('https://wa.me/9999999999?text=Hi%2C%20I%20am%20interested%20in%20Shivadhama%20Residency', '_blank');
+    window.open('https://wa.me/9999999999?text=Hi', '_blank');
   };
 
   const handleCall = () => {

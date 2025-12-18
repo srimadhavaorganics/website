@@ -45,7 +45,7 @@ const HeroSection = () => {
             {content.home?.heroTitle || "Madhava Organics"}
           </motion.h1>
           <p className="text-xl md:text-3xl mb-8 text-white/95 font-light drop-shadow-md">
-            {content.home?.heroSubtitle || "Premium Rental Apartments in the Heart of Mysuru"}
+            {content.home?.heroSubtitle || "Goodness of Nature for Your Home"}
           </p>
           <div className="inline-flex items-center justify-center space-x-2 text-lg drop-shadow-md bg-white/10 backdrop-blur-sm px-6 py-2 rounded-full border border-white/20">
             <MapPin className="w-5 h-5 text-white" />

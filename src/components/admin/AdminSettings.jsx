@@ -60,10 +60,10 @@ const AdminSettings = () => {
     const handleFullBackup = () => {
         // Collect all local storage keys related to data
         const data = {
-            properties: JSON.parse(localStorage.getItem('shivadhama_properties') || '[]'),
-            siteContent: JSON.parse(localStorage.getItem('shivadhama_content') || '{}'),
-            pageImages: JSON.parse(localStorage.getItem('shivadhama_images') || '{}'),
-            blogs: JSON.parse(localStorage.getItem('shivadhama_blogs') || '[]'),
+            properties: JSON.parse(localStorage.getItem('madhavaorganics_properties') || '[]'),
+            siteContent: JSON.parse(localStorage.getItem('madhavaorganics_content') || '{}'),
+            pageImages: JSON.parse(localStorage.getItem('madhavaorganics_images') || '{}'),
+            blogs: JSON.parse(localStorage.getItem('madhavaorganics_blogs') || '[]'),
             timestamp: new Date().toISOString(),
             version: '1.0'
         };
@@ -96,10 +96,10 @@ const AdminSettings = () => {
             try {
                 const backup = JSON.parse(event.target.result);
 
-                if (backup.properties) localStorage.setItem('shivadhama_properties', JSON.stringify(backup.properties));
-                if (backup.siteContent) localStorage.setItem('shivadhama_content', JSON.stringify(backup.siteContent));
-                if (backup.pageImages) localStorage.setItem('shivadhama_images', JSON.stringify(backup.pageImages));
-                if (backup.blogs) localStorage.setItem('shivadhama_blogs', JSON.stringify(backup.blogs));
+                if (backup.properties) localStorage.setItem('madhavaorganics_properties', JSON.stringify(backup.properties));
+                if (backup.siteContent) localStorage.setItem('madhavaorganics_content', JSON.stringify(backup.siteContent));
+                if (backup.pageImages) localStorage.setItem('madhavaorganics_images', JSON.stringify(backup.pageImages));
+                if (backup.blogs) localStorage.setItem('madhavaorganics_blogs', JSON.stringify(backup.blogs));
 
                 toast({ title: "Restore Successful", description: "Site data has been restored. Reloading..." });
                 setTimeout(() => window.location.reload(), 1500);

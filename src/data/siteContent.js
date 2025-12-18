@@ -5,7 +5,7 @@ export const initialSiteContent = {
     contactPhone: "9999999999",
     contactEmail: "srimadhavaorganics@gmail.com",
     address: "Madhava Organics, 53, 2nd Cross Road, 4th Block, Jayalakshmipuram, Mysuru, Karnataka 570012",
-    googleMapsUrl: "https://www.google.com/maps/dir//Shivadhama+Residency,+53,+2nd+Cross+Road,+4th+Block,+Jayalakshmipuram,+Mysuru,+Karnataka+570012/@12.3225958,76.6272425,17z/data=!4m16!1m7!3m6!1s0x3baf7a9033cfe2c9:0x5f95e6a0b830538b!2sShivadhama+Residency!8m2!3d12.3225958!4d76.6272425!16s%2Fg%2F11f_b_0qf1!4m7!1m0!1m5!1m1!1s0x3baf7a9033cfe2c9:0x5f95e6a0b830538b!2m2!1d76.6271845!2d12.3226516?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoKLDEwMDc5MjA3MUgBUAM%3D",
+    googleMapsUrl: "https://www.google.com/maps/dir/MadhavaOrganics",
     footerAbout: "Your trusted partner for broker-free rental homes in Mysuru. We offer premium apartments with modern amenities in the heart of Jayalakshmipuram."
   },
   home: {
@@ -15,7 +15,7 @@ export const initialSiteContent = {
     whyChooseSubtitle: "We don't just rent apartments; we provide homes. Experience a hassle-free lifestyle in Mysuru's most prestigious neighborhood."
   },
   about: {
-    title: "About Shiva Dhama Residency",
+    title: "About Madhava Organics",
     subtitle: "Modern, spacious rental homes—100% broker-free—right in Mysuru",
     features: [
       "Affordable Rent",
@@ -33,7 +33,7 @@ export const initialSiteContent = {
       { name: "Trust", description: "Direct dealing with the property owner." }
     ],
     closingParagraph: "We are committed to offering rental homes that bring peace, comfort, and happiness to every family.",
-    finalLine: "Your new home in Mysuru begins here — at Shiva Dhama Residency."
+    finalLine: "Your new home in Mysuru begins here — at Madhava Organics."
   },
   contact: {
     title: "Get in Touch",
@@ -45,7 +45,7 @@ export const initialSiteContent = {
     title: "The Heart of Mysuru",
     subtitle: "Discover premium, broker-free rental homes in the prestigious Jayalakshmipuram neighborhood.",
     descriptionTitle: "Prime Location, Zero Brokerage",
-    descriptionText: "Searching for 'rental homes near me' or 'no broker house for rent in Mysore'? Look no further. Shiva Dhama Residency is strategically located in Jayalakshmipuram, offering the perfect balance of serenity and city connectivity. By renting directly from the owner, you avoid unnecessary brokerage fees while securing a home in one of Mysuru's safest and most upscale localities. Whether you need a 1BHK, 2BHK, or 3BHK, our homes provide easy access to the Outer Ring Road, Mysore University, and major IT hubs, making your daily commute effortless.",
+    descriptionText: "Searching for 'rental homes near me' or 'no broker house for rent in Mysore'? Look no further. Madhava Organics is strategically located in Jayalakshmipuram, offering the perfect balance of serenity and city connectivity. By renting directly from the owner, you avoid unnecessary brokerage fees while securing a home in one of Mysuru's safest and most upscale localities. Whether you need a 1BHK, 2BHK, or 3BHK, our homes provide easy access to the Outer Ring Road, Mysore University, and major IT hubs, making your daily commute effortless.",
     nearbyTitle: "What's Nearby?",
     nearbyDesc: "Everything you need is just around the corner from your new rental home.",
     attractionsTitle: "Famous Attractions",

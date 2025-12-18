@@ -31,7 +31,7 @@ const Navbar = () => {
               {content.global?.siteName || "Madhava Organics"}
             </span>
             <span className="text-xl font-bold text-gray-900 sm:hidden">
-              {content.global?.siteName?.split(' ')[0] || "Shivadhama"}
+              {content.global?.siteName?.split(' ')[0] || "Madhava Organics"}
             </span>
           </Link>
 
