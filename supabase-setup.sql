@@ -85,18 +85,18 @@ CREATE POLICY "Public can view all properties"
   ON public.properties FOR SELECT 
   USING (true);
 
--- Public write access (for simplified admin - change for production)
-CREATE POLICY "Public can insert properties" 
+-- Authenticated write access
+CREATE POLICY "Authenticated users can insert properties" 
   ON public.properties FOR INSERT 
-  WITH CHECK (true);
+  WITH CHECK (auth.role() = 'authenticated');
 
-CREATE POLICY "Public can update properties" 
+CREATE POLICY "Authenticated users can update properties" 
   ON public.properties FOR UPDATE 
-  USING (true);
+  USING (auth.role() = 'authenticated');
 
-CREATE POLICY "Public can delete properties" 
+CREATE POLICY "Authenticated users can delete properties" 
   ON public.properties FOR DELETE 
-  USING (true);
+  USING (auth.role() = 'authenticated');
 
 -- 6. Create RLS Policies for blogs
 -- Public can view published blogs
@@ -128,10 +128,18 @@ CREATE POLICY "Public can view site content"
   ON public.site_content FOR SELECT 
   USING (true);
 
--- Public write access (for simplified admin - change for production)
-CREATE POLICY "Public can modify site content" 
-  ON public.site_content FOR ALL 
-  USING (true);
+-- Authenticated write access
+CREATE POLICY "Authenticated users can insert site content" 
+  ON public.site_content FOR INSERT 
+  WITH CHECK (auth.role() = 'authenticated');
+
+CREATE POLICY "Authenticated users can update site content" 
+  ON public.site_content FOR UPDATE 
+  USING (auth.role() = 'authenticated');
+
+CREATE POLICY "Authenticated users can delete site content" 
+  ON public.site_content FOR DELETE 
+  USING (auth.role() = 'authenticated');
 
 -- 8. Create storage bucket
 INSERT INTO storage.buckets (id, name, public)
@@ -145,15 +153,15 @@ CREATE POLICY "Public read access for property images"
 
 CREATE POLICY "Authenticated users can upload property images"
   ON storage.objects FOR INSERT
-  WITH CHECK (bucket_id = 'property-images');
+  WITH CHECK (bucket_id = 'property-images' AND auth.role() = 'authenticated');
 
 CREATE POLICY "Authenticated users can update property images"
   ON storage.objects FOR UPDATE
-  USING (bucket_id = 'property-images');
+  USING (bucket_id = 'property-images' AND auth.role() = 'authenticated');
 
 CREATE POLICY "Authenticated users can delete property images"
   ON storage.objects FOR DELETE
-  USING (bucket_id = 'property-images');
+  USING (bucket_id = 'property-images' AND auth.role() = 'authenticated');
 
 -- Verification query
 SELECT 
